@@ -8,7 +8,7 @@ if (isset($_POST['get_sections']) && !empty($_POST['course_id'])) {
     $course_id = $_POST['course_id'];
     
     $query = "SELECT s.Section_Number, s.Classroom, s.Meeting_Days, s.Begin_Time, s.End_Time, 
-                     COUNT(e.Student_ID) as Enrolled_Students
+                     COUNT(e.Student_CWID) as Enrolled_Students
               FROM Section s
               LEFT JOIN Enrollment e ON s.Course_ID = e.Course_ID AND s.Section_Number = e.Section_Number
               WHERE s.Course_ID = ?
@@ -28,17 +28,17 @@ if (isset($_POST['get_sections']) && !empty($_POST['course_id'])) {
     }
 }
 
-if (isset($_POST['get_grades']) && !empty($_POST['student_id'])) {
-    $student_id = $_POST['student_id'];
+if (isset($_POST['get_grades']) && !empty($_POST['student_cwid'])) {
+    $student_cwid = $_POST['student_cwid'];
     
     $query = "SELECT c.Course_ID, c.Title, e.Section_Number, e.Grade
               FROM Enrollment e
               JOIN Course c ON e.Course_ID = c.Course_ID
-              WHERE e.Student_ID = ?
+              WHERE e.Student_CWID = ?
               ORDER BY c.Course_ID";
     
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("s", $student_id);
+    $stmt->bind_param("s", $student_cwid);
     $stmt->execute();
     $result = $stmt->get_result();
     
@@ -109,8 +109,8 @@ if (isset($_POST['get_grades']) && !empty($_POST['student_id'])) {
             <h2>Student Grades</h2>
             <form method="post" action="">
                 <div class="form-group">
-                    <label for="student_id">Enter Student ID:</label>
-                    <input type="text" id="student_id" name="student_id" required>
+                    <label for="student_cwid">Enter Student ID:</label>
+                    <input type="text" id="student_cwid" name="student_cwiid" required>
                 </div>
                 <button type="submit" name="get_grades" class="btn">Get Grades</button>
             </form>
