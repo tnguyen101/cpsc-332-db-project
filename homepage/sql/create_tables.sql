@@ -56,6 +56,7 @@ CREATE TABLE Section (
     Begin_Time TIME,
     End_Time TIME,
     Professor_SSN VARCHAR(11),
+    PRIMARY KEY (Course_ID, Section_Number),
     FOREIGN KEY (Course_ID) REFERENCES Course(Course_ID),
     FOREIGN KEY (Professor_SSN) REFERENCES Professor(SSN)
 );
