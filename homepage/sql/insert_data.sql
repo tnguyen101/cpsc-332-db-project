@@ -1,3 +1,8 @@
+INSERT INTO Professor (SSN, Name, Street_Address, City, State, Zip_Code, Telephone, Sex, Degrees, Title, Salary)
+VALUES
+('111-22-3333', 'Dr. Alan Turing', '1 Computer Way', 'Fullerton', 'CA', '92831', '714-555-0003', 'M', 'PhD', 'Professor', 120000.00),
+('222-33-4444', 'Dr. Ada Lovelace', '2 Math Ave', 'Fullerton', 'CA', '92831', '714-555-0004', 'F', 'PhD', 'Professor', 115000.00);
+
 INSERT INTO Department (dept_id, name, telephone, office_location, chairperson_ssn)
 VALUES
 (1, 'Computer Science', '714-555-0001', 'CS-101', '111-22-3333'),

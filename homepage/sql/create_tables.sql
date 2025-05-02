@@ -79,7 +79,7 @@ CREATE TABLE Student_Minor (
     PRIMARY KEY (Student_CWID, Dept_ID),
     FOREIGN KEY (Student_CWID) REFERENCES Student(Student_CWID),
     FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID)
-)
+);
 
 CREATE TABLE Enrollment (
     Student_CWID VARCHAR(10),
@@ -89,4 +89,4 @@ CREATE TABLE Enrollment (
     PRIMARY KEY (Student_CWID, Course_ID, Section_Number),
     FOREIGN KEY (Student_CWID) REFERENCES Student(Student_CWID),
     FOREIGN KEY (Course_ID, Section_Number) REFERENCES Section(Course_ID, Section_Number)
-)
+);
