@@ -14,7 +14,7 @@ CREATE TABLE Professor (
     City VARCHAR(50),
     State VARCHAR(2),
     Zip_Code VARCHAR(5),
-    Telephone VARCHAR(10),
+    Telephone VARCHAR(15),
     Sex CHAR(1),
     Degrees VARCHAR(200),
     Title VARCHAR(50),
@@ -24,7 +24,7 @@ CREATE TABLE Professor (
 CREATE TABLE Department (
     Dept_ID INT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
-    Telephone VARCHAR(10),
+    Telephone VARCHAR(15),
     Office_Location VARCHAR(100),
     Chairperson_SSN VARCHAR(11),
     FOREIGN KEY (Chairperson_SSN) REFERENCES Professor(SSN)
@@ -68,7 +68,7 @@ CREATE TABLE Student (
     City VARCHAR(50),
     State VARCHAR(2),
     Zip_Code VARCHAR(5),
-    Telephone VARCHAR(10),
+    Telephone VARCHAR(15),
     Major_Dept INT,
     FOREIGN KEY (Major_Dept) REFERENCES Department(Dept_ID)
 );
