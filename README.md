@@ -31,15 +31,27 @@ Built with:
 - Modern web browser  
 
 ### Executing the Program
-1. Clone repository: git clone https://github.com/tnguyen101/cpsc-332-db-project.git
-2. Create database: mysql -u root -p -e "CREATE DATABASE university_db"
-3. Import schema and data:'''
-    mysql -u root -p university_db < sql/create_tables.sql'''
+1. Clone repository:
+   ```
+   git clone https://github.com/tnguyen101/cpsc-332-db-project.git
+   ```
+3. Create database:
+   ```
+   mysql -u root -p -e "CREATE DATABASE university_db"
+   ```
+5. Import schema and data:
+   ```
+    mysql -u root -p university_db < sql/create_tables.sql
     mysql -u root -p university_db < sql/insert_data.sql
-5. Run the command: php -S localhost:8000
+   ```
+6. Run the command:
+   ```
+   php -S localhost:8000
+   ```
 
 ## Folder Structure
-```CPSC-332-Database-Project/
+```
+CPSC-332-Database-Project/
 ├── homepage/
 │ ├── css/ # Stylesheets
 │ ├── includes/ # Database connection
