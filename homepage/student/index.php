@@ -110,7 +110,7 @@ if (isset($_POST['get_grades']) && !empty($_POST['student_cwid'])) {
             <form method="post" action="">
                 <div class="form-group">
                     <label for="student_cwid">Enter Student ID:</label>
-                    <input type="text" id="student_cwid" name="student_cwiid" required>
+                    <input type="text" id="student_cwid" name="student_cwid" required>
                 </div>
                 <button type="submit" name="get_grades" class="btn">Get Grades</button>
             </form>
