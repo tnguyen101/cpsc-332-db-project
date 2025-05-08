@@ -1,3 +1,51 @@
+-- Insert Professors (3)
+INSERT INTO Professor (SSN, Name, Street_Address, City, State, Zip_Code, Telephone, Sex, Degrees, Title, Salary)
+VALUES
+('111-22-3333', 'Dr. Alan Turing', '1 Computer Way', 'Fullerton', 'CA', '92831', '714-555-0003', 'M', 'PhD Computer Science', 'Professor', 120000.00),
+('222-33-4444', 'Dr. Ada Lovelace', '2 Math Ave', 'Fullerton', 'CA', '92831', '714-555-0004', 'F', 'PhD Mathematics', 'Professor', 115000.00),
+('333-44-5555', 'Dr. Grace Hopper', '3 Computer Blvd', 'Fullerton', 'CA', '92831', '714-555-0005', 'F', 'PhD Computer Science', 'Associate Professor', 105000.00);
+
+-- Insert Departments (2)
+INSERT INTO Department (Dept_ID, Name, Telephone, Office_Location, Chairperson_SSN)
+VALUES
+(1, 'Computer Science', '714-555-0001', 'CS-101', '111-22-3333'),
+(2, 'Mathematics', '714-555-0002', 'MH-201', '222-33-4444');
+
+-- Insert Students (8)
+INSERT INTO Student (Student_CWID, First_Name, Last_Name, Street_Address, City, State, Zip_Code, Telephone, Major_Dept)
+VALUES
+('C12345678', 'Dave', 'Smith', '12345 Main St', 'Fullerton', 'CA', '92831', '714-555-1234', 1),
+('C23456789', 'Emma', 'Johnson', '23456 Oak Ave', 'Anaheim', 'CA', '92801', '714-555-2345', 2),
+('C34567890', 'Michael', 'Williams', '34567 Pine St', 'Garden Grove', 'CA', '92840', '714-555-3456', 1),
+('C45678901', 'Sophia', 'Brown', '45678 Maple Dr', 'Fullerton', 'CA', '92831', '714-555-4567', 2),
+('C56789012', 'James', 'Jones', '56789 Cedar Ln', 'Anaheim', 'CA', '92801', '714-555-5678', 1),
+('C67890123', 'Olivia', 'Garcia', '67890 Elm St', 'Garden Grove', 'CA', '92840', '714-555-6789', 2),
+('C78901234', 'William', 'Miller', '78901 Birch Ave', 'Fullerton', 'CA', '92831', '714-555-7890', 1),
+('C89012345', 'Ava', 'Davis', '89012 Walnut Blvd', 'Anaheim', 'CA', '92801', '714-555-8901', 2);
+
+-- Insert Student Minors (optional)
+INSERT INTO Student_Minor (Student_CWID, Dept_ID)
+VALUES
+('C12345678', 2),
+('C34567890', 2),
+('C56789012', 2),
+('C23456789', 1),
+('C45678901', 1);
+
+-- Insert Courses (4)
+INSERT INTO Course (Course_ID, Title, Textbook, Units, Dept_ID)
+VALUES
+('CPSC120', 'Introduction to Programming', 'Starting Out with Python', 3, 1),
+('CPSC223', 'Data Structures', 'Data Structures & Algorithms in Java', 3, 1),
+('MATH150', 'Calculus I', 'Calculus: Early Transcendentals', 4, 2),
+('MATH250', 'Linear Algebra', 'Linear Algebra and Its Applications', 3, 2);
+
+-- Insert Prerequisites
+INSERT INTO Prerequisite (Course_ID, Prereq_ID)
+VALUES
+('CPSC223', 'CPSC120'),
+('MATH250', 'MATH150');
+
 -- Insert Sections (6)
 INSERT INTO Section (Course_ID, Section_Number, Classroom, Seats, Meeting_Days, Begin_Time, End_Time, Professor_SSN)
 VALUES
