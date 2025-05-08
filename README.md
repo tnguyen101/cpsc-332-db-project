@@ -53,15 +53,15 @@ Built with:
 ```
 CPSC-332-Database-Project/
 ├── homepage/
-│ ├── css/ # Stylesheets
-│ ├── includes/ # Database connection
-│ ├── professor/ # Faculty interface
-│ ├── student/ # Student portal
-│ └── index.html # Main entry point
+│ ├── css/               #Stylesheets
+│ ├── includes/          #Database connection
+│ ├── professor/         #Faculty interface
+│ ├── student/           #Student portal
+│ └── index.html         #Main entry point
 ├── sql/
-│ ├── create_tables.sql # DDL statements
-│ └── insert_data.sql # Sample records
-└── docs/ # Project report/screenshots
+│ ├── create_tables.sql  #DDL statements
+│ └── insert_data.sql    #Sample records
+└── docs/                #Project report/screenshots
 ```
 ## Project Report Contents  
 - ER Diagram & Relational Model  
