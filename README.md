@@ -74,14 +74,14 @@ CPSC-332-Database-Project/
   - Academic transcript 
 
 ## Authors
-Travis Nguyen,
-  Department of Computer Science
+Travis Nguyen,  
+  Department of Computer Science  
   California State University, Fullerton
 
-Jason Khau,
-  Department of Computer Science
+Jason Khau,  
+  Department of Computer Science  
   California State University, Fullerton
 
-Omar Mejia
-  Department of Computer Science
+Omar Mejia,  
+  Department of Computer Science  
   California State University, Fullerton
